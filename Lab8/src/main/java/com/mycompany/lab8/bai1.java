@@ -1,16 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
+
 
 package com.mycompany.lab8;
 
-/**
- *
- * @author ICT
- */
-public class bai1 {
+import java.util.Scanner;
+
+
+public final class bai1 {
+
+    public static final double sum(double... x) {
+        double tong = 0;
+        for (double n : x) {
+            tong += n;
+                    
+        }
+        return tong;
+    }
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhap so luong phan tu: ");
+        int n = sc.nextInt();
+
+        double[] arr = new double[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Nhap so thu " + (i + 1) + ": ");
+            arr[i] = sc.nextDouble();
+        }
+        double tong = bai1.sum(arr);
+        System.out.println("Tong la: " + tong);
+}
 }
